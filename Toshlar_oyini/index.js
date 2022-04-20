@@ -1,6 +1,13 @@
 const fs = require('fs');
 const data = fs.readFileSync('input.txt', 'utf8');
+const input = +data
 
-const [a, b] = data.split(' ').map(item => parseInt(item));
-fs.writeFileSync('output.txt', `${a+b}`, 'utf8');
+function whoes(input) {
+    if(input % 2 ===0) {
+        return 'Second player'
+    }
+    return 'First player'
+}
+
+fs.writeFileSync('output.txt', `${whoes(input)}`, 'utf8');
 
