@@ -3,7 +3,7 @@ const data = fs.readFileSync('input.txt', 'utf8');
 
 const input = +data
 
- function res(input) {  
+ function res(input) {
      if (input % 2 === 0) {
          return input / 2 + 1
      }
