@@ -3,6 +3,7 @@ const data = fs.readFileSync('input.txt', 'utf8');
 
 const [a, b, c] = data.split(' ').map(item => parseInt(item));
 
+const sum = data.split('').reduce((total, elem) => total+(+elem), 0)
 
 
 function parta(a, b, c) {
