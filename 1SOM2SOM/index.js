@@ -5,6 +5,5 @@ const input = +data
 
 const res = Math.floor(input/2) + 1
 
-
 fs.writeFileSync('output.txt', `${res}`, 'utf8');
 
