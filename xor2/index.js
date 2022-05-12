@@ -3,8 +3,8 @@ const data = fs.readFileSync('input.txt', 'utf8');
 
 const [a,...arr] = data.split('\n')
 
-
 const [b,c] = arr.map(elem => elem.split(' '))
+
 
 
 function xor(a,b,c) {
