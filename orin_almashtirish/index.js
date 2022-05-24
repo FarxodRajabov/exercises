@@ -5,7 +5,7 @@ let [a, b] = data.split(' ').map(item => parseInt(item));
 
 console.log(`${a} ${b}`);
 
-a = a + b
+a = a + b  
 b = a - b
 a = a - b
 
