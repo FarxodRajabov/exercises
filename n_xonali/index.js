@@ -7,9 +7,9 @@ const [a, b] = data.split(' ')
 
 function length(a,b) {
     if(b.length === +a){
-        return 'yes'
+        return "yes"
     }else {
-        return 'no'
+        return "no"
     }
 }
 
