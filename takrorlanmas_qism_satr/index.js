@@ -5,9 +5,6 @@ const [a, ...b] = data.split('\n')
 const c = +a 
 
 
-let isExist = 0
-
-
 function str(a, b) {
     let res = ''
     const elems = b.map(elem => elem.split(''))
