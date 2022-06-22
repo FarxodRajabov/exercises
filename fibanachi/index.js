@@ -6,10 +6,8 @@ const input = +data
 
 function fiban (n) {
     let array = [1, 2]
-    let index = 0
     for (let i = 2; i < n; i++) {
-        index = array[i - 1] + array[i - 2]
-        array.push(index)
+        array.push(array[i - 1] + array[i - 2])
     }
     return array
 }
