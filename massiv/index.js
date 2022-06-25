@@ -21,7 +21,6 @@ for (let i = 1; i < len; i++) {
         max_elem = numbers[i]
     }
 }
-console.log('okok');
 
 fs.writeFileSync('output.txt', `${len-max_count}`, 'utf8');
 
