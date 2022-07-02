@@ -1,34 +1,28 @@
 const fs = require('fs');
-const n = fs.readFileSync('input.txt', 'utf8');
+const n = +fs.readFileSync('input.txt', 'utf8');
 
-
-function tub(n) {
-    let array = []
-    let sqrti = 1
-    let kvi = 1
-    let isPrime = 0
-    
-    for (let i = 2; i <= +n; i++) {
-        isPrime = true
-        if(kvi < i) {
-            sqrti += 1
-            kvi = sqrti*sqrti
+function res(n) {
+    let arrPrime = [2]
+    let sqrt = 3
+    for (let i = 3; i <= n; i++) {
+        let isPrime = true
+        if (sqrt * sqrt <= i) {
+            sqrt += 1
         }
-
-        for (let a = 2; a <= sqrti; a++) {
-            if (i % a === 0) {
-                isPrime =false
+        for (let a = 2; a < sqrt; a++) {
+            if (i % a === 0 ) {
+                isPrime = false
                 break
             }
         }
-        if(isPrime) {
-            array.push(i)
+        if (isPrime) {
+            arrPrime.push(i)
         }
     }
-    return array
+    return arrPrime
 }
 
-fs.writeFileSync('output.txt', `${tub(n)}`, 'utf8');
+fs.writeFileSync('output.txt', `${res(n)}`, 'utf8');
 
 
 
